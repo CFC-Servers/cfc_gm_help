@@ -1,3 +1,5 @@
+local uiColor = Color( 36, 41, 67, 255 )
+
 local function openHelp()
     local window = vgui.Create( "DFrame" )
 
@@ -12,13 +14,13 @@ local function openHelp()
     window:MakePopup()
 
     window.Paint = function( self, w, h )
-    draw.RoundedBox( 8, 0, 0, w, h, Color( 36, 41, 67, 255 ) )
+        draw.RoundedBox( 8, 0, 0, w, h, uiColor )
     end
 
     local html = vgui.Create( "DHTML", window )
 
     html:Dock( FILL )
-    html:OpenURL("https://cfcservers.org/learn/")
+    html:OpenURL( "https://cfcservers.org/learn/" )
 end
 
 local function hideScrollbar()
@@ -28,7 +30,7 @@ end
 concommand.Add( "cfc_help", openHelp )
 
 hook.Add( "OnPlayerChat", "CFC_Help_OpenHelpCommand", function( ply, msg )
-    if string.sub( msg, 1, 5 ) ~= "!help" then return end
+    if string.StartWith( msg, "!help" ) then return end
 
     if ply == LocalPlayer() then
         openHelp()
