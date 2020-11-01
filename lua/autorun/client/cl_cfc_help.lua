@@ -21,14 +21,13 @@ local function openHelp()
     html:OpenURL("https://cfcservers.org/learn/")
 end
 
-local function hideScrollbar ()
+local function hideScrollbar()
     -- WIP
 end
 
 concommand.Add( "cfc_help", openHelp )
 
 hook.Add( "OnPlayerChat", "CFC_Help_OpenHelpCommand", function( ply, msg )
-
     if string.sub( msg, 1, 5 ) ~= "!help" then return end
 
     if ply == LocalPlayer() then
