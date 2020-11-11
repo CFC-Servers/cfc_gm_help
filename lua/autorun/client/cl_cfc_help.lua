@@ -30,7 +30,7 @@ end
 concommand.Add( "cfc_help", openHelp )
 
 hook.Add( "OnPlayerChat", "CFC_Help_OpenHelpCommand", function( ply, msg )
-    if string.StartWith( msg, "!help" ) then return end
+    if not string.StartWith( msg, "!help" ) then return end
 
     if ply == LocalPlayer() then
         openHelp()
