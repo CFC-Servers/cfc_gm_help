@@ -20,7 +20,7 @@ local function openHelp()
     local html = vgui.Create( "DHTML", window )
 
     html:Dock( FILL )
-    html:OpenURL( "https://cfcservers.org/learn/" )
+    html:OpenURL( "https://cfcservers.org/learn/player/" )
 end
 
 local function hideScrollbar()
