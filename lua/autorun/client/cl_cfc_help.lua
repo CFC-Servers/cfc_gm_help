@@ -80,7 +80,7 @@ hook.Add( "OnPlayerChat", "CFC_Help_CommandMatcher", function( ply, msg )
             CFCHelp:openUrl( commandInfo.url, commandInfo.title )
         end
 
-        if helpType == "func" then
+        if helpType == "function" then
             commandInfo.func()
         end
     end
