@@ -1,10 +1,10 @@
 CFCHelp = {
     colors = {
-        ui = Color( 36, 41, 67, 255 ),
-        lightBlue = Color( 83, 227, 251, 255 ),
+        ui = Color( 36, 41, 67 ),
+        lightBlue = Color( 83, 227, 251 ),
         lightGreen = Color( 83, 251, 191 ),
-        white = Color( 255, 255, 255, 255 ),
-        grey = Color( 175, 175, 175, 255 )
+        white = Color( 255, 255, 255 ),
+        grey = Color( 175, 175, 175 )
     },
 
     commandMap = {
