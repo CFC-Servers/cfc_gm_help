@@ -55,7 +55,7 @@ function CFCHelp:openUrl( url, title )
     window:MakePopup()
 
     window.Paint = function( self, w, h )
-        draw.RoundedBox( 8, 0, 0, w, h, self.colors.ui )
+        draw.RoundedBox( 8, 0, 0, w, h, CFCHelp.colors.ui )
     end
 
     local html = vgui.Create( "DHTML", window )
