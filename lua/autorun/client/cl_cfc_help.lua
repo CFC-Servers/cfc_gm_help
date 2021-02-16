@@ -90,7 +90,9 @@ hook.Add( "OnPlayerChat", "CFC_Help_CommandMatcher", function( ply, msg )
     end
 end )
 
-hook.Add( "InitPostEntity", "CFC_Help_Motd", function()
+hook.Add( "Think", "CFC_Help_Motd", function()
+    hook.Remove( "Think", "CFC_Help_Motd" )
+
     local commandInfo = CFCHelp.commandMap["!motd"]
     CFCHelp:openUrl( commandInfo.url, commandInfo.title )
 end )
