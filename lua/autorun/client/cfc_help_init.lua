@@ -29,7 +29,7 @@ CFCHelp = {
 
         ["!rules"] = {
             helpType = "html",
-            description = "Opens the Rules page"
+            description = "Opens the Rules page",
             title = "CFC Rules",
             url = "https://cfcservers.org/cfc3/motd",
         },
