@@ -1,4 +1,5 @@
 CFCHelp = {
+    realm = GetConVar( "cfc_realm" ):GetString(),
     colors = {
         ui = Color( 36, 41, 67 ),
         lightBlue = Color( 83, 227, 251 ),
@@ -6,6 +7,10 @@ CFCHelp = {
         white = Color( 255, 255, 255 ),
         grey = Color( 175, 175, 175 )
     },
+
+    formatUrl = function( self, url )
+        return string.format( url, self.realm )
+    end,
 
     _openUrl = include( "cfc_help/client/cfc_html_panel.lua" ),
     openUrl = function( self, url, title )
@@ -31,13 +36,13 @@ CFCHelp = {
             helpType = "html",
             description = "Opens the Rules page",
             title = "CFC Rules",
-            url = "https://cfcservers.org/cfc3/motd",
+            url = self.formatUrl( "https://cfcservers.org/%s/motd" ),
         },
 
         ["!motd"] = {
             helpType = "html",
             description = "Opens the Rules Summary page",
-            url = "https://cfcservers.org/cfc3/shortrules",
+            url = self.formatUrl( "https://cfcservers.org/%s/shortrules" ),
             title = "CFC Rules"
         },
 
@@ -64,7 +69,7 @@ CFCHelp = {
             helpType = "function",
             description = "Opens the workshop collection for this page",
             func = function()
-                gui.OpenURL( "https://cfcservers.org/cfc3/collection" )
+                gui.OpenURL( self.formatUrl( "https://cfcservers.org/%s/collection" ) )
             end
         },
 
