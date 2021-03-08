@@ -88,7 +88,8 @@ CFCHelp = {
                     for command, data in pairs(commandSet) do
                         MsgC(
                             CFCHelp.colors.lightGreen, command, ": ",
-                            CFCHelp.colors.lightBlue, data.description
+                            CFCHelp.colors.lightBlue, data.description,
+                            "\n"
                         )
                     end
                 end
