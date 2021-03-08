@@ -36,13 +36,13 @@ CFCHelp = {
             helpType = "html",
             description = "Opens the Rules page",
             title = "CFC Rules",
-            url = CFCHelp:formatUrl( "https://cfcservers.org/%s/motd" ),
+            url = "https://cfcservers.org/%s/motd",
         },
 
         ["!motd"] = {
             helpType = "html",
             description = "Opens the Rules Summary page",
-            url = CFCHelp:formatUrl( "https://cfcservers.org/%s/shortrules" ),
+            url = "https://cfcservers.org/%s/shortrules",
             title = "CFC Rules"
         },
 
@@ -109,7 +109,8 @@ hook.Add( "OnPlayerChat", "CFC_Help_CommandMatcher", function( ply, msg )
     local helpType = commandInfo.helpType
 
     if helpType == "html" then
-        CFCHelp:openUrl( commandInfo.url, commandInfo.title )
+        local url = CFCHelp:formatUrl( commandInfo.url )
+        CFCHelp:openUrl( url, commandInfo.title )
     end
 
     if helpType == "function" then
