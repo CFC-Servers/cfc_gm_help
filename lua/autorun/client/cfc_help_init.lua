@@ -36,13 +36,13 @@ CFCHelp = {
             helpType = "html",
             description = "Opens the Rules page",
             title = "CFC Rules",
-            url = self.formatUrl( "https://cfcservers.org/%s/motd" ),
+            url = CFCHelp:formatUrl( "https://cfcservers.org/%s/motd" ),
         },
 
         ["!motd"] = {
             helpType = "html",
             description = "Opens the Rules Summary page",
-            url = self.formatUrl( "https://cfcservers.org/%s/shortrules" ),
+            url = CFCHelp:formatUrl( "https://cfcservers.org/%s/shortrules" ),
             title = "CFC Rules"
         },
 
@@ -69,7 +69,7 @@ CFCHelp = {
             helpType = "function",
             description = "Opens the workshop collection for this page",
             func = function()
-                gui.OpenURL( self.formatUrl( "https://cfcservers.org/%s/collection" ) )
+                gui.OpenURL( CFCHelp:formatUrl( "https://cfcservers.org/%s/collection" ) )
             end
         },
 
