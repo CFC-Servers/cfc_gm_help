@@ -1,5 +1,6 @@
 CFCHelp = {
     realm = GetConVar( "cfc_realm" ):GetString(),
+
     colors = {
         ui = Color( 36, 41, 67 ),
         lightBlue = Color( 83, 227, 251 ),
@@ -55,6 +56,7 @@ CFCHelp = {
 
         ["!discord"] = {
             helpType = "function",
+            description = "Opens our Discord invite link",
             func = function()
                 chat.AddText(
                     CFCHelp.colors.lightGreen,
