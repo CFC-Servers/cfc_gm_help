@@ -50,7 +50,7 @@ CFCHelp = {
         ["!apply"] = {
             helpType = "html",
             description = "Opens the Applications page",
-            url = "https://cfcservers.org/apply",
+            url = "https://cfcservers.org/%s/apply",
             title = "CFC Applications"
         },
 
