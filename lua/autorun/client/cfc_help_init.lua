@@ -124,5 +124,6 @@ hook.Add( "Think", "CFC_Help_Motd", function()
     hook.Remove( "Think", "CFC_Help_Motd" )
 
     local commandInfo = CFCHelp.commandMap["!motd"]
-    CFCHelp:openUrl( commandInfo.url, commandInfo.title )
+    local url = CFCHelp:formatUrl( commandInfo.url )
+    CFCHelp:openUrl( url, commandInfo.title )
 end )
