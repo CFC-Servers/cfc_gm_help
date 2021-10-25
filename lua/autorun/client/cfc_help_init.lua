@@ -79,8 +79,6 @@ CFCHelp = {
             helpType = "function",
             description = "Lists all available CFC commands",
             func = function()
-                chat.AddText( CFCHelp.colors.lightGreen, "Printing command info to your console!" )
-
                 local helpCommands = CFCHelp.commandMap
                 local externalCommands = CFCHelp.externalCommandInfo
 
@@ -88,8 +86,8 @@ CFCHelp = {
 
                 for _, commandSet in ipairs( commandSets ) do
                     for command, data in pairs(commandSet) do
-                        MsgC(
-                            CFCHelp.colors.lightGreen, command, ": ",
+                        chat.AddText(
+                            "\n", CFCHelp.colors.lightGreen, command, ": ",
                             CFCHelp.colors.lightBlue, data.description,
                             "\n"
                         )
