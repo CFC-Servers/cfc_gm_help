@@ -84,10 +84,11 @@ CFCHelp = {
 
                 local commandSets = { helpCommands, externalCommands }
 
+                chat.AddText( "\n" )
                 for _, commandSet in ipairs( commandSets ) do
                     for command, data in pairs(commandSet) do
                         chat.AddText(
-                            "\n", CFCHelp.colors.lightGreen, command, ": ",
+                            CFCHelp.colors.lightGreen, command, ": ",
                             CFCHelp.colors.lightBlue, data.description,
                             "\n"
                         )
