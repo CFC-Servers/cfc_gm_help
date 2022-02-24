@@ -9,11 +9,11 @@ GUI:
 ## Hooks
 
 ### Client
- - **`GM:CFC_Help_ShowMotd( Player player )`**
+ - **`GM:CFC_Help_ShowMotd()`**
 Called right before displaying the Motd to the player
 Return `false` to prevent the player from seeing the MotD.
 
- - **`GM:CFC_Help_ClosedMotd( Player player )`**
+ - **`GM:CFC_Help_ClosedMotd()`**
 Called when the player closes the Motd with the "x" button.
 
 ### Server
