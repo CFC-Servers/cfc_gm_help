@@ -48,10 +48,9 @@ CFCHelp = {
         },
 
         ["!apply"] = {
-            helpType = "html",
+            helpType = "steamhtml",
             description = "Opens the Applications page",
-            url = "https://cfcservers.org/%s/apply",
-            title = "CFC Applications"
+            url = "https://cfcservers.org/%s/apply"
         },
 
         ["!discord"] = {
@@ -68,11 +67,9 @@ CFCHelp = {
         },
 
         ["!addons"] = {
-            helpType = "function",
+            helpType = "steamhtml",
             description = "Opens the workshop collection for this page",
-            func = function()
-                gui.OpenURL( CFCHelp:formatUrl( "https://cfcservers.org/%s/collection" ) )
-            end
+            url = "https://cfcservers.org/%s/collection"
         },
 
         ["!commands"] = {
@@ -112,6 +109,11 @@ hook.Add( "OnPlayerChat", "CFC_Help_CommandMatcher", function( ply, msg )
     if helpType == "html" then
         local url = CFCHelp:formatUrl( commandInfo.url )
         CFCHelp:openUrl( url, commandInfo.title )
+    end
+
+    if helpType == "steamhtml" then
+        local url = CFCHelp:formatUrl( commandInfo.url )
+        gui.OpenURL( url )
     end
 
     if helpType == "function" then
