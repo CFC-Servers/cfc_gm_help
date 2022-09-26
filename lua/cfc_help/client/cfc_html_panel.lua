@@ -12,7 +12,7 @@ local function openUrl( url, title, uiColor )
     window:SetTitle( title )
     window:MakePopup()
 
-    window.Paint = function( self, w, h )
+    window.Paint = function( _, w, h )
         draw.RoundedBox( 8, 0, 0, w, h, uiColor )
     end
 
