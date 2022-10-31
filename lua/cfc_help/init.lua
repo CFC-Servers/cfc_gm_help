@@ -1,4 +1,4 @@
-CreateConVar( "cfc_realm", "unknown", FCVAR_REPLICATED + FCVAR_ARCHIVE )
+CreateConVar( "cfc_realm", "cfc3", FCVAR_REPLICATED + FCVAR_ARCHIVE )
 
 if SERVER then
     AddCSLuaFile( "client/html_panel.lua" )
