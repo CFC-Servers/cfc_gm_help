@@ -1,1 +1,2 @@
-include( "lua/cfc_help/init.lua" )
+AddCSLuaFile( "cfc_help/init.lua" )
+include( "cfc_help/init.lua" )
