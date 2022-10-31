@@ -1,1 +1,1 @@
-CreateConVar( "cfc_realm", "unknown", FCVAR_REPLICATED + FCVAR_ARCHIVE )
+include( "lua/cfc_help/init.lua" )
