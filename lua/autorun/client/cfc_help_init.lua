@@ -57,12 +57,7 @@ CFCHelp = {
             helpType = "function",
             description = "Opens our Discord invite link",
             func = function()
-                chat.AddText(
-                    CFCHelp.colors.lightGreen,
-                    "Visit the following URL in your browser: ",
-                    CFCHelp.colors.lightBlue,
-                    "https://cfcservers.org/discord"
-                )
+                gui.OpenURL( "https://cfcservers.org/discord?now" )
             end
         },
 
