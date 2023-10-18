@@ -91,7 +91,10 @@ CFCHelp = {
     }
 }
 
+local string_lower = string.lower
 hook.Add( "OnPlayerChat", "CFC_Help_CommandMatcher", function( ply, msg )
+    msg = string_lower( msg )
+
     local commandInfo = CFCHelp.commandMap[msg]
     if not commandInfo then return end
 
