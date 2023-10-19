@@ -57,7 +57,7 @@ CFCHelp = {
             helpType = "function",
             description = "Opens our Discord invite link",
             func = function()
-                gui.OpenURL( "https://cfcservers.org/discord?now" )
+                gui.OpenURL( "https://discord.gg/cfcservers" )
             end
         },
 
