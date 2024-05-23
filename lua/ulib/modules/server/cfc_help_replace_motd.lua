@@ -1,6 +1,6 @@
 for k, v in pairs( ulx.cmdsByCategory.Menus ) do
     if v.cmd == "ulx motd" then
-        ulx.cmdsByCategory.Menus[k] = nil
+        table.remove( ulx.cmdsByCategory.Menus, k )
         break
     end
 end
