@@ -118,12 +118,3 @@ hook.Add( "OnPlayerChat", "CFC_Help_CommandMatcher", function( ply, msg )
     end
 end )
 
-hook.Add( "Think", "CFC_Help_Motd", function()
-    hook.Remove( "Think", "CFC_Help_Motd" )
-
-    timer.Simple( 2, function()
-        local commandInfo = CFCHelp.commandMap["!motd"]
-        local url = CFCHelp:formatUrl( commandInfo.url )
-        CFCHelp:openUrl( url, commandInfo.title )
-    end )
-end )
